@@ -8,6 +8,16 @@ function moveDodgerLeft() {
       dodger.style.left = `${left - 1}px`;
     }
   }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") {
+      moveDodgerLeft();
+    }
+    else if(e.key === "ArrowRight") {
+      moveDodgerRight();
+    }
+  });
+
  
   function moveDodgerRight(){
     const leftNumbers = dodger.style.left.replace("px", "" );
@@ -19,14 +29,7 @@ function moveDodgerLeft() {
   }
 
 
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowLeft") {
-      moveDodgerLeft();
-    }
-    else if(e.key === "ArrowRight") {
-      moveDodgerRight();
-    }
-  });
+ 
 
 
 
